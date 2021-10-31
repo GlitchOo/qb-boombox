@@ -6,6 +6,8 @@ It accepts youtube urls, you can pause, resume, stop, and change the volume of t
 
 Requires:<br>
   [qb-core](https://github.com/qbcore-framework/qb-core)<br>
+  [qb-menu](https://github.com/qbcore-framework/qb-menu)<br>
+  [qb-input](https://github.com/qbcore-framework/qb-input)<br>
   [qb-inventory](https://github.com/qbcore-framework/qb-inventory)<br>
   [xsound](https://github.com/Xogy/xsound)<br>
 <br>

@@ -1,7 +1,6 @@
 -- Variables
 
 local QBCore = exports['qb-core']:GetCoreObject()
-local PlayerData = {}
 local currentData = nil
 
 -- Functions
@@ -18,21 +17,6 @@ local function helpText(text)
     AddTextComponentString(text)
     DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 end
-
--- Handlers
-
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-    PlayerData = QBCore.Functions.GetPlayerData()
-end)
-
-RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-    PlayerData.job = JobInfo
-end)
-
-RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
-    PlayerData = {}
-end)
-
 
 -- Events
 

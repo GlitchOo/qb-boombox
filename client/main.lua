@@ -185,8 +185,6 @@ CreateThread(function()
                 else
                   exports['qb-menu']:closeMenu()
                 end
-            else
-              exports['qb-menu']:closeMenu()
             end
         end
         Wait(sleep)

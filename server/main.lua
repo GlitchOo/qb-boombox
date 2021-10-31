@@ -1,6 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local xSound = exports.xsound
-local isPlaying = false
 
 QBCore.Functions.CreateUseableItem("boombox", function(source, item)
 	local src = source

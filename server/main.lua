@@ -7,7 +7,7 @@ QBCore.Functions.CreateUseableItem("boombox", function(source, item)
 	Player.Functions.RemoveItem('boombox', 1, false)
 	
 	TriggerClientEvent('qb-boombox:client:placeBoombox', src)
-	TriggerClientEvent('QBCore:Notify', src, 'You have just dropped the BoomBox', 'info')
+	TriggerClientEvent('QBCore:Notify', src, 'You have just dropped the BoomBox', 'primary')
 end)
 
 RegisterNetEvent('qb-boombox:server:playMusic', function(song, entity, coords)

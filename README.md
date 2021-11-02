@@ -2,7 +2,10 @@
 
 This resource creates a usable boombox item.
 Using the item places the object on the ground giving anyone near access to a menu to play music.
-It accepts youtube urls, you can pause, resume, stop, and change the volume of the audio.
+It accepts youtube urls, you can pause, resume, stop, and change the volume of the audio.<br>
+Preview:<br>
+https://medal.tv/games/gta-v/clips/4KeJhpohKXePa/JhzHWjffDVEZ?invite=cr-MSxxVlksMjQxMDUxMjgs
+<br>
 
 Requires:<br>
   [qb-core](https://github.com/qbcore-framework/qb-core)<br>

@@ -2,6 +2,7 @@
 
 local QBCore = exports['qb-core']:GetCoreObject()
 local currentData = nil
+local isLoggedIn = false
 
 -- Functions
 
@@ -19,6 +20,14 @@ local function helpText(text)
 end
 
 -- Events
+
+RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
+    isLoggedIn = false
+end)
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    isLoggedIn = true
+end)
 
 RegisterNetEvent('qb-boombox:client:placeBoombox', function()
     loadAnimDict("anim@heists@money_grab@briefcase")
@@ -169,7 +178,7 @@ end)
 CreateThread(function()
     while true do
         local sleep = 1000
-        if LocalPlayer.state['isLoggedIn'] then
+        if isLoggedIn then
             local ped = PlayerPedId()
             local coords    = GetEntityCoords(ped)
             local object = GetClosestObjectOfType(coords, 3.0, GetHashKey('prop_boombox_01'), false, false, false)

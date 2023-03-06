@@ -48,7 +48,6 @@ RegisterNetEvent('qb-boombox:client:pickupBoombox', function()
     DeleteObject(obj)
     if not DoesEntityExist(obj) then
         TriggerServerEvent('qb-boombox:server:pickedup', currentData)
-        TriggerServerEvent('QBCore:Server:AddItem', 'boombox', 1)
         currentData = nil
     end
     Citizen.Wait(500)

@@ -5,7 +5,7 @@ QBCore.Functions.CreateUseableItem("boombox", function(source, item)
 	local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
 	Player.Functions.RemoveItem('boombox', 1, false)
-	
+
 	TriggerClientEvent('qb-boombox:client:placeBoombox', src)
 	TriggerClientEvent('QBCore:Notify', src, 'You have just dropped the BoomBox', 'primary')
 end)
@@ -19,7 +19,10 @@ end)
 
 RegisterNetEvent('qb-boombox:server:pickedup', function(entity)
     local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
     xSound:Destroy(-1, tostring(entity))
+    Player.Functions.AddItem("boombox", 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["boombox"], 'add')
 end)
 
 RegisterNetEvent('qb-boombox:server:stopMusic', function(data)

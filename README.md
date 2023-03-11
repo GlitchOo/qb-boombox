@@ -12,6 +12,7 @@ Requires:<br>
   [qb-menu](https://github.com/qbcore-framework/qb-menu)<br>
   [qb-input](https://github.com/qbcore-framework/qb-input)<br>
   [qb-inventory](https://github.com/qbcore-framework/qb-inventory)<br>
+  [qb-target](https://github.com/qbcore-framework/qb-target)<br>
   [xsound](https://github.com/Xogy/xsound)<br>
 <br>
 Place the "html" folder in qb-inventory.<br>
